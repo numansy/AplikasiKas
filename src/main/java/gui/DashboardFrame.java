@@ -30,7 +30,7 @@ public class DashboardFrame extends JFrame {
 
     public DashboardFrame() {
 
-        setTitle("CashFlow - Personal Finance Manager");
+        setTitle("CashFlow - Manajemen Kas");
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -76,7 +76,7 @@ public class DashboardFrame extends JFrame {
             new EmptyBorder(20, 12, 20, 12)
         );
 
-        JLabel logo = new JLabel("  CASHFLOW");
+        JLabel logo = new JLabel("  Arus Kas");
 
         logo.setFont(
             new Font("Segoe UI", Font.BOLD, 23)
@@ -100,7 +100,7 @@ public class DashboardFrame extends JFrame {
 
         sidebar.add(Box.createVerticalGlue());
 
-        JLabel footer = new JLabel("Personal Finance");
+        JLabel footer = new JLabel("Manajemen Kas");
 
         footer.setForeground(new Color(180, 190, 205));
 

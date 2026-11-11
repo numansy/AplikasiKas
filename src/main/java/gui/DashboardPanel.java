@@ -48,13 +48,13 @@ public class DashboardPanel extends JPanel {
         incomeLabel = new JLabel("Rp0");
         expenseLabel = new JLabel("Rp0");
 
-        cards.add(createCard("TOTAL BALANCE", balanceLabel,
+        cards.add(createCard("SALDO", balanceLabel,
                 new Color(37, 99, 235)));
 
-        cards.add(createCard("TOTAL INCOME", incomeLabel,
+        cards.add(createCard("TOTAL PEMASUKAN", incomeLabel,
                 new Color(22, 163, 74)));
 
-        cards.add(createCard("TOTAL EXPENSES", expenseLabel,
+        cards.add(createCard("TOTAL PENGELUARAN", expenseLabel,
                 new Color(220, 38, 38)));
 
         center.add(cards, BorderLayout.NORTH);
@@ -77,7 +77,7 @@ public class DashboardPanel extends JPanel {
         JPanel history = new JPanel(new BorderLayout(5, 10));
         history.setOpaque(false);
 
-        JLabel historyTitle = new JLabel("Recent Transactions");
+        JLabel historyTitle = new JLabel("Transaksi terakhir");
         historyTitle.setFont(new Font("Arial", Font.BOLD, 18));
 
         history.add(historyTitle, BorderLayout.NORTH);
@@ -133,11 +133,11 @@ public void refreshData() {
 
         for (Transaction t : transactions) {
 
-            if (t.getType().equalsIgnoreCase("INCOME")) {
+            if (t.getType().equalsIgnoreCase("PEMASUKAN")) {
 
                 income = income.add(t.getAmount());
 
-            } else if (t.getType().equalsIgnoreCase("EXPENSE")) {
+            } else if (t.getType().equalsIgnoreCase("PENGELUARAN")) {
 
                 expense = expense.add(t.getAmount());
             }
